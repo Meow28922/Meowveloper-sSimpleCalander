@@ -1,0 +1,141 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --bgColor : black;
+    --textColor : white;
+    --headingColor: rgb(62, 250, 11);
+}
+
+body {
+    background-color: coral;
+}
+
+.yearTitle {
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.monthTitle {
+    color: var(--headingColor);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.daysContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+.days {
+    min-width: 100px;
+    max-width: 10%;
+    /* height: 200px; */
+    background-color: var(--bgColor);
+    /* flex: 1 1 calc(10% - 10px); */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(10% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px 0px;
+    margin: 5px;
+    color: var(--textColor);
+}
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 30px;
+}
+.buttons {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    user-select: none;
+    cursor: pointer;
+}
+
+.active {
+    color: red;
+    font-weight: bold;
+}
+.theClock {
+    width: 50%;
+    margin: 30px auto;
+    background-color: black;
+    min-width: 250px;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 10px 0px;
+    color: white;
+}
+
+.clockContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: white;
+}
+
+.clockContainer>div:first-child,
+.clockContainer>div:first-child>p {
+    text-align: center;
+    width: 100%;
+}
+.hourMinuteSeconds{
+    padding: 10px;
+    font-size: 1.5em;
+    color: white;
+    user-select: none;
+    text-align: center;
+    width: 100%;
+}
+
+.formatToggle {
+    /* position: absolute; */
+    width: 60px;
+    background-color: darkgray;
+    padding: 1px;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.formatToggle>div:first-child {
+    width: 50%;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    left: 0%;
+    transition: all 0.3s ease-in-out;
+}
+
+.not24Hour {
+    background-color: cadetblue;
+}
+
